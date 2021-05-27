@@ -1,27 +1,26 @@
 import React from 'react';
-import GlobalStyle from './globalStyles';
-import Home from './pages/HomePage/Home';
-import Services from './pages/Services/Services';
-import Products from './pages/Products/Products';
-import SignUp from './pages/SignUp/SignUp';
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ScrollToTop from './components/ScrollToTop';
-import { Navbar, Footer } from './components';
-
+import ScrollToTop from './ScrollToTop';
+import Home from "./pages/Home";
+import Services from "./pages/Services"
+import Nav from './components/Navbar/Nav'
+import Footer from "./components/Footer/Footer"
+import Product from './pages/Product'
 function App() {
   return (
     <Router>
-      <GlobalStyle />
-      <ScrollToTop />
-      <Navbar />
+      <ScrollToTop/>
+      <Nav/>
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/services' component={Services} />
-        <Route path='/products' component={Products} />
-        <Route path='/sign-up' component={SignUp} />
+        <Route path="/" exact component={Home}/>
+        <Route path="/Services" exact component={Services}/>
+        <Route path="/Product" exact component={Product}/>
+
       </Switch>
-      <Footer />
+      <Footer/>
     </Router>
+    
   );
 }
 

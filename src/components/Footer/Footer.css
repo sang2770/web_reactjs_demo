@@ -1,0 +1,131 @@
+.Footer{
+    background-color: var(--main-color);
+    padding:30px 10px;
+    color: #fff;
+    font-size: 1.6rem;
+}
+.Footer_container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.Footer_title{
+    text-align: center;
+       
+}
+.title_content{
+    font-size: 2.4rem;
+    padding: 20px 0px;
+    font-weight: 500;
+}
+.title_context{
+    font-size:1.6rem;
+    padding-bottom: 20px;
+}
+.Footer_form{
+    padding:20px 10px;
+}
+.form_input{
+    width: 250px;
+    padding:10px;
+    font-size: 1.6rem;
+    float: right;
+    outline: none;
+    border: none;
+}
+.btn-form{
+
+}
+.Footer_Contact{
+    padding: 30px 40px;
+    
+}
+.ContactItem{
+   padding-left: 20px;
+}
+.ContactItem_title{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+.ContactMenu{
+    list-style: none;
+}
+.Contact_MenuItem{
+    margin: 5px 0px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 5px;
+    
+}
+.Contact_MenuItem .Link{
+    position: relative;
+    color: white;
+}
+.Link::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    bottom: -4px;
+    border: 1px solid rgb(121, 121, 130);
+    opacity: 0;
+    transition: 0.4s;
+}
+.Link:hover{
+    opacity: 0.8;
+}
+.Link:hover::after{
+    opacity: 1;
+    width: 90%;
+    
+}
+.Footer_Bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Footer_logo{
+    font-size: 1.6rem;
+}
+.Footer_text{
+    padding: 0 5px;
+}
+.Footer_icon{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.Footer_icon_item{
+    padding: 5px;
+    font-size: 2rem;
+}
+
+/* response */
+@media ( max-width:63.9375em)
+{
+    .form_input{
+        width: 90%;
+        margin-bottom: 10px;
+        margin:10px auto;
+        float: none;
+        /* float:left; */ 
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+    }
+    .btn-form{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .ContactItem{
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .Footer_Contact{
+        /* text-align: center; */
+    }
+    .Footer_Bottom{
+        justify-content: center;
+    }
+}

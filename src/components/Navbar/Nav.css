@@ -1,0 +1,98 @@
+.NavContainer{
+    background-color: var(--main-color);
+    width: 100%;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.Nav{
+    height: 80px;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.6rem;
+}
+.Nav_logo{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo{
+    font-size: 5.6rem;
+}
+
+.MobileIcon{
+    cursor: pointer;
+    padding-top: 10px;
+    display: none;
+}
+.Nav_logo_title{
+    text-align: left;
+    line-height: 80px;
+    letter-spacing: 0.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.Nav_MenuItem{
+    display: flex;
+    list-style: none;
+    /* transition: 0.4s; */
+}
+a{
+    text-decoration: none;
+}
+.MenuItem{
+    font-size: 2rem;
+    line-height: 78px;
+    margin: 0px 10px;
+    padding: 0px 5px;
+    color: white;
+}
+.MenuItem:hover{
+    border-bottom: 2px solid var(--private-color);
+    opacity: 0.8;
+}
+.MenuItem:last-child:hover{
+    border-bottom: none;
+    opacity: 0.8;
+}
+/* response */
+@media (max-width:63.9375em){
+    .NavContainer{
+        padding: 0;
+    }
+    .Nav_logo{
+        padding: 0 20px;
+    }
+    .Nav, .Nav_MenuItem{
+        flex-direction: column;
+    }
+    .Nav_MenuItem{
+        background-color: var(--main-color);
+        transform: translateX(-110%);
+        min-height: 90vw;
+    }
+    .MenuItem{
+        text-align: center;
+        
+    }
+    .MenuItem:hover{
+        color: var(--private-color);
+    }
+    .MenuItem .btn{
+        width: 100%;
+    }
+    .active_MenuItem{
+        transition: 0.4s;
+        transform: translateX(0%);
+    }
+    .MobileIcon{
+        display: block;
+    }
+
+}
